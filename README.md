@@ -22,7 +22,7 @@ Bem-vindo ao repositório oficial do **Super Mario Bros - O Filme**! Esta é uma
 |                                       💻 O Projeto                                       |                                         🛠️ Técnico                                          |                                     🤝 Comunidade                                      |
 | :--------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: |
 |   [![1. Sobre](https://img.shields.io/badge/1%20-%20Sobre-4CAF50)](#sobre-o-projeto)    | [![5. Destaques](https://img.shields.io/badge/5%20-%20Destaques-607D8B)](#destaques-tecnicos) |   [![9. Código](https://img.shields.io/badge/9%20-%20Código-795548)](#codigo-fonte)    |
-| [![2. Techs](https://img.shields.io/badge/2%20-%20Techs-2196F3)](#tecnologias-utilizadas) |    [![6. Deploy](https://img.shields.io/badge/6%20-%20Deploy-009688)](#fluxo-de-deploy)     |   [![10. Créditos](https://img.shields.io/badge/10%20-%20Créditos-607D8B)](#créditos)   |
+| [![2. Techs](https://img.shields.io/badge/2%20-%20Techs-2196F3)](#tecnologias-utilizadas) |    [![6. Instalação](https://img.shields.io/badge/6%20-%20Instalação-009688)](#instalacao)     |   [![10. Créditos](https://img.shields.io/badge/10%20-%20Créditos-607D8B)](#créditos)   |
 |   [![3. Acessar](https://img.shields.io/badge/3%20-%20Acessar-FF9800)](#como-acessar)   | [![7. Contribuir](https://img.shields.io/badge/7%20-%20Contribuir-3F51B5)](#como-contribuir) |    [![11. Licença](https://img.shields.io/badge/11%20-%20Licença-E91E63)](#licenca)     |
 | [![4. Funções](https://img.shields.io/badge/4%20-%20Funções-9C27B0)](#funcionalidades)  |             [![8. FAQ](https://img.shields.io/badge/8%20-%20FAQ-FFC107)](#faq)              | [![12. Perfil](https://img.shields.io/badge/12%20-%20Perfil-212121)](#perfil-do-github) |
 
@@ -46,7 +46,7 @@ Clique no botão abaixo para entrar no Reino dos Cogumelos:
 
 <div align="left">
   <a href="https://domisnnet.github.io/Mario-Brothers-Web-Essentials/" target="_blank">
-    <img alt="Acessar Projeto" src="https://img.shields.io/badge/▶%20Acessar%20Projeto-E91E63?style=for-the-badge&logo=github&logoColor=white" />
+    <img alt="Acessar Projeto" src="imagens/botão.webp" />
   </a>
 </div>
 
@@ -77,16 +77,14 @@ O modal é controlado com apenas `classList.toggle("aberto")` e manipulação di
 
 ---
 
-<h2 id="fluxo-de-deploy">6. 📦 Fluxo de Deploy</h2>
-
-O deploy utiliza **GitHub Pages** diretamente da branch `main`.
-
-Para publicar uma nova versão:
+<h2 id="instalacao">6. 🚀 Instalação e Configuração Local</h2>
 
 ```bash
-git add .
-git commit -m "feat: descrição da alteração"
-git push origin main
+# Clonar o repositório
+git clone https://github.com/Domisnnet/Mario-Brothers-Web-Essentials.git
+
+# Acessar a pasta
+cd Mario-Brothers-Web-Essentials
 ```
 
 O GitHub Pages atualiza automaticamente em alguns segundos após o push.
