@@ -46,7 +46,7 @@ Clique no botão abaixo para entrar no Reino dos Cogumelos:
 
 <div align="left">
   <a href="https://domisnnet.github.io/Mario-Brothers-Web-Essentials/" target="_blank">
-    <img alt="Acessar Projeto" src="imagens/botão.webp" />
+    <img alt="Botão Acessar" src="imagens/botão.webp" height="70" width="70" />
   </a>
 </div>
 
