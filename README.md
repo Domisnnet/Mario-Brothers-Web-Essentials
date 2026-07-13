@@ -158,7 +158,7 @@ Explore o projeto completo no repositório oficial:
 
 <h2 id="licenca">11. 📄 Licença</h2>
 
-Este projeto está sob a [Licença MIT](https://github.com/Domisnnet/Mario-Brothers-Web-Essentials/blob/main/LICENSE).
+Este projeto está sob a [![Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/Domisnnet/Mario-Brothers-Web-Essentials/blob/main/LICENSE)
 
 ---
 
