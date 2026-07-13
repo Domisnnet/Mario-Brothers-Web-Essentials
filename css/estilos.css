@@ -68,10 +68,14 @@ body {
     overflow: hidden;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .fundo-video .video {
     height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    transform: scale(1.35);
 }
 
 .fundo-video::after {
@@ -90,9 +94,10 @@ body {
     height: 100vh;
     top: 0;
     left: 0;
-    background-color: rgba(52, 52, 50, 0.749);
+    background-color: rgba(5, 5, 5, 0.85);
     opacity: 0;
     visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 
 .conteudo-modal {
@@ -103,23 +108,43 @@ body {
     height: 100vh;
     border-radius: 5px;
     gap: 15px;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .fechar-modal {
-    background-color: #ffffff;
-    color: #f03a17;
+    background-color: #ff0021;
+    color: #ffffff;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
     width: 40px;
+    height: 40px;
+    line-height: 36px;
     text-align: center;
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    align-self: flex-end;
 }
 
-.modal iframe {
-    border-width: 0;
-    width: 640px;
-    height: 360px;
+.fechar-modal:hover {
+    transform: scale(1.1) rotate(90deg);
+    background-color: #ffffff;
+    color: #ff0021;
+    border-color: #ff0021;
+}
+
+.modal video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 3px solid #ff0021;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 0, 33, 0.4);
+    outline: none;
+    background-color: #000000;
 }
 
 .modal.aberto {
