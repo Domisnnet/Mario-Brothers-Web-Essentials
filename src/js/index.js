@@ -1,7 +1,7 @@
-let botaoTrailer = document.querySelector(".botao-trailer");
-let botaoFecharModal = document.querySelector(".fechar-modal");
-let video = document.getElementById("video");
-let modal = document.querySelector(".modal");
+const botaoTrailer = document.querySelector(".botao-trailer");
+const botaoFecharModal = document.querySelector(".fechar-modal");
+const video = document.getElementById("video");
+const modal = document.querySelector(".modal");
 const linkDoVideo = "/src/vídeo/mario.mp4";
 
 function alternarModal(){ modal.classList.toggle("aberto"); }
