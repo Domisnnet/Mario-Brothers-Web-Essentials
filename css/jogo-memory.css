@@ -79,7 +79,7 @@ body {
 }
 
 .jb-header h1 {
-  font-family: 'Press Start 2P', cursive;
+  font-family: var(--font-pixel);
   font-size: clamp(10px, 2vw, 18px);
   color: var(--gold);
   text-shadow: 0 0 16px rgba(255, 213, 39, 0.6);
@@ -138,7 +138,7 @@ body {
 .config-item label {
   display: block;
   font-size: 11px;
-  font-weight: 600;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: var(--gold);
@@ -148,23 +148,48 @@ body {
 .config-item select {
   width: 100%;
   padding: 9px 10px;
-  border-radius: 8px;
-  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;              
+  border: 1.5px solid rgba(255, 213, 39, 0.4); 
   background: rgba(255, 255, 255, 0.08);
-  color: var(--white);
+  color: var(--green);
   font-family: var(--font-main);
   font-size: 13px;
+  font-weight: bold;
   cursor: pointer;
-  transition: border-color 0.2s;
-  appearance: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none;                  
+  box-shadow: 0 0 0 2px rgba(255, 213, 39, 0.08) inset;
 }
 
 .config-item select:focus {
   outline: none;
   border-color: var(--gold);
+  font-weight: bold;
+  box-shadow: 0 0 0 3px rgba(255, 213, 39, 0.25);
 }
 
 .config-item select option {
+  background: #0b3b5c;              
+  color: var(--gold); 
+  font-weight: bold;                  
+  border-radius: var(--radius);             
+  padding: 6px 8px;
+}
+
+.config-item select option[value="easy"],
+.config-item select option[value="characters"] {
+  color: #8aff8a; 
+  font-weight: bold;
+}
+
+.config-item select option[value="hard"] {
+  color: #ff6b6b; 
+  font-weight: bold;
+}
+
+.config-item select option {
+  border-radius: var(--radius);
+  font-weight: bold;
   background: #0b3b5c;
 }
 
@@ -218,7 +243,7 @@ body {
   align-items: center;
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 213, 39, 0.25);
-  border-radius: 10px;
+  border-radius: var(--radius);
   padding: 10px 24px;
   min-width: 110px;
   backdrop-filter: blur(4px);
