@@ -1,153 +1,171 @@
 body {
-    font-family: 'Poppins';
+  font-family: 'Poppins';
 }
 
 .cabecalho {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    max-width: 1440px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .cabecalho .logo {
-    width: 65px;
+  width: 65px;
 }
 
 .cabecalho nav li a {
-    font-weight: bold;
-    color: #ffffff;
-    font-size: 25px;
-    padding: 10px 20px;
-    border-radius: 50px;
-    transition: 0.2s;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 25px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: 0.2s;
 }
 
 .container {
-    max-width: 1440px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    height: calc(100vh - 132px);
-    padding: 0 30px 30px;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 132px);
+  padding: 0 30px 30px;
 }
 
 .container .imagem-titulo {
-    max-width: 500px;
+  max-width: 500px;
 }
 
 .container .descricao {
-    color: #a8adb7;
-    width: 85%;
-    font-size: 18px;
-    margin: 30px 0;
+  color: #a8adb7;
+  width: 85%;
+  font-size: 18px;
+  margin: 30px 0;
 }
 
 .container .botao-trailer {
-    background-color: #ff0021;
-    color: #ffffff;
-    padding: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    border-radius: 15px;
-    text-transform: uppercase;
-    transition: 0.5s all ease-in-out;
+  background-color: #ff0021;
+  color: #ffffff;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  text-transform: capitalize;
+  transition: 0.5s all ease-in-out;
 }
 
 .container .botao-trailer:hover {
-    transform: scale(1.1)
+  transform: scale(1.1)
+}
+
+.container .botao-criar-jogo {
+  background-color: #ff0021;
+  color: #ffffff;
+  padding: 20px;
+  margin-left: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  text-transform: capitalize;
+  transition: 0.5s all ease-in-out;
+}
+
+.container .botao-criar-jogo:hover {
+  transform: scale(1.1)
 }
 
 .fundo-video {
-    position: absolute;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fundo-video .video {
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    transform: scale(1.35);
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  transform: scale(1.35);
 }
 
 .fundo-video::after {
-    content: "";
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%);
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 1) 100%);
 }
 
 .modal {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-color: rgba(5, 5, 5, 0.85);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(5, 5, 5, 0.85);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 
 .conteudo-modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    border-radius: 5px;
-    gap: 15px;
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  border-radius: 5px;
+  gap: 15px;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .fechar-modal {
-    background-color: #ff0021;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 22px;
-    width: 40px;
-    height: 40px;
-    line-height: 36px;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 50%;
-    border: 2px solid #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
-    align-self: flex-end;
+  background-color: #ff0021;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  line-height: 36px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  align-self: flex-end;
 }
 
 .fechar-modal:hover {
-    transform: scale(1.1) rotate(90deg);
-    background-color: #ffffff;
-    color: #ff0021;
-    border-color: #ff0021;
+  transform: scale(1.1) rotate(90deg);
+  background-color: #ffffff;
+  color: #ff0021;
+  border-color: #ff0021;
 }
 
 .modal video {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    border: 3px solid #ff0021;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 0, 33, 0.4);
-    outline: none;
-    background-color: #000000;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 3px solid #ff0021;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 0, 33, 0.4);
+  outline: none;
+  background-color: #000000;
 }
 
 .modal.aberto {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }

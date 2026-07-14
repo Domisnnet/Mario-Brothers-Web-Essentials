@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600;700&display=swap');
+
+/* ==========================================
+  Reset & Base 
+========================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-main: 'Poppins', sans-serif;
+  --font-pixel: 'Press Start 2P', cursive;
+  --font-size-base: 16px;
+  --font-size-sm: 13px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+  --font-size-xxxl: 48px;
+  --red: #e23e3e;
+  --gold: #ffd527;
+  --dark: #071428;
+  --blue: #0b3b5c;
+  --green: #52c41a;
+  --yellow: #ffeaa0;
+  --white: #fff;
+  --card-back: linear-gradient(135deg, #e23e3e 0%, #8b0000 100%);
+  --card-front: linear-gradient(135deg, #fff9e6 0%, #ffeaa0 100%);
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+}
+
+body {
+  font-family: var(--font-main);
+  background: radial-gradient(ellipse at 50% 0%, #1a3a6c 0%, #071428 65%);
+  min-height: 100vh;
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* ==========================================
+  Background stars 
+========================================== */
+.bg-stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bg-stars span {
+  position: absolute;
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.65);
+  animation: twinkle var(--dur, 3s) ease-in-out infinite var(--delay, 0s);
+}
+
+/* ==========================================
+  Header 
+========================================== */
+.jb-header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 24px;
+  border-bottom: 2px solid rgba(255, 213, 39, 0.2);
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+}
+
+.jb-header h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(10px, 2vw, 18px);
+  color: var(--gold);
+  text-shadow: 0 0 16px rgba(255, 213, 39, 0.6);
+  letter-spacing: 1px;
+}
+
+.voltar {
+  color: var(--white);
+  text-decoration: none;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  font-size: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.voltar:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ==========================================
+  Main 
+========================================== */
+.jb-main {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 16px 40px;
+}
+
+/* ==========================================
+  Config Panel 
+========================================== */
+.jb-config {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  width: 100%;
+  max-width: 520px;
+  backdrop-filter: blur(8px);
+}
+
+.config-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.config-item label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.config-item select {
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  font-family: var(--font-main);
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  appearance: none;
+}
+
+.config-item select:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.config-item select option {
+  background: #0b3b5c;
+}
+
+.btn-start {
+  width: 100%;
+  padding: 13px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, var(--red) 0%, #c0392b 100%);
+  color: var(--white);
+  font-family: var(--font-pixel);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 18px rgba(226, 62, 62, 0.5);
+  transition: transform 0.15s, box-shadow 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-start::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), transparent);
+  pointer-events: none;
+}
+
+.btn-start:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(226, 62, 62, 0.7);
+}
+
+.btn-start:active {
+  transform: translateY(0);
+}
+
+/* ==========================================
+  Scoreboard 
+========================================== */
+.scoreboard {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.score-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 213, 39, 0.25);
+  border-radius: 10px;
+  padding: 10px 24px;
+  min-width: 110px;
+  backdrop-filter: blur(4px);
+}
+
+.score-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 4px;
+}
+
+.score-val {
+  font-family: var(--font-pixel);
+  font-size: var(--font-size-sm);
+  color: var(--gold);
+  text-shadow: 0 0 10px rgba(255, 213, 39, 0.5);
+}
+
+/* ==========================================
+  Board 
+========================================== */
+.jb-board-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.jb-board {
+  display: grid;
+  gap: 10px;
+  padding: 6px;
+}
+
+/* ==========================================
+  Cards 
+========================================== */
+.card {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  perspective: 800px;
+  position: relative;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: var(--radius);
+}
+
+.card.flipped .card-inner,
+.card.matched .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ==========================================
+  Back face 
+========================================== */
+.card-back {
+  background: var(--card-back);
+  box-shadow: var(--shadow);
+  border: 2.5px solid rgba(255, 255, 255, 0.15);
+}
+
+.card-back::before {
+  content: '?';
+  font-family: var(--font-pixel);
+  font-size: var(--font-size-xxl);
+  color: rgba(255, 255, 255, 0.6);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================
+  Front face 
+========================================== */
+.card-front {
+  background: var(--card-front);
+  transform: rotateY(180deg);
+  box-shadow: var(--shadow);
+  border: 2.5px solid rgba(255, 255, 255, 0.5);
+}
+
+.card-front img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  transition: transform 0.2s;
+  image-rendering: pixelated;
+}
+
+/* ==========================================
+  Matched state 
+========================================== */
+.card.matched .card-front {
+  background: linear-gradient(135deg, #d4edda 0%, #a8d8b9 100%);
+  border-color: #52c41a;
+  animation: matchPop 0.4s ease forwards;
+}
+
+/* ==========================================
+  Error state 
+========================================== */
+.card.error .card-inner {
+  animation: shake 0.5s ease;
+}
+
+/* ==========================================
+  Hover effect 
+========================================== */
+.card:not(.matched):not(.flipped):hover .card-inner {
+  transform: rotateY(10deg) scale(1.05);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================
+  Win Modal 
+========================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  backdrop-filter: blur(6px);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-overlay[hidden] {
+  display: none;
+}
+
+.modal-box {
+  background: linear-gradient(160deg, #0b3b5c 0%, #071428 100%);
+  border: 2px solid var(--gold);
+  border-radius: 20px;
+  padding: 40px 48px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 60px rgba(255, 213, 39, 0.25);
+  animation: slideUp 0.35s cubic-bezier(0.3, 1.3, 0.4, 1) forwards;
+}
+
+.modal-stars {
+  font-size: 38px;
+  letter-spacing: 8px;
+  margin-bottom: 12px;
+  animation: starBounce 0.6s ease 0.3s both;
+}
+
+.modal-title {
+  font-family: var(--font-pixel);
+  font-size: var(--font-size-lg);
+  color: var(--gold);
+  margin-bottom: 14px;
+  text-shadow: 0 0 20px rgba(255, 213, 39, 0.7);
+}
+
+.modal-msg {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-modal {
+  padding: 11px 22px;
+  border-radius: 10px;
+  border: none;
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.btn-replay {
+  background: linear-gradient(135deg, #e23e3e 0%, #c0392b 100%);
+  color: var(--white);
+  box-shadow: 0 4px 14px rgba(226, 62, 62, 0.4);
+}
+
+.btn-menu {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-modal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================
+  Feedback toast 
+========================================== */
+.toast {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+  background: rgba(226, 62, 62, 0.95);
+  color: var(--white);
+  font-family: var(--font-pixel);
+  font-size: var(--font-size-sm);
+  padding: 10px 22px;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s;
+  z-index: 9999;
+  white-space: nowrap;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ==========================================
+  Animations
+========================================== */ 
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.6); }
+}
+
+@keyframes matchPop {
+  0% { transform: rotateY(180deg) scale(1); }
+  50% { transform: rotateY(180deg) scale(1.18); }
+  100% { transform: rotateY(180deg) scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: rotateY(180deg) translateX(0); }
+  20% { transform: rotateY(180deg) translateX(-5px); }
+  40% { transform: rotateY(180deg) translateX(5px); }
+  60% { transform: rotateY(180deg) translateX(-4px); }
+  80% { transform: rotateY(180deg) translateX(4px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px) scale(0.95); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes starBounce {
+  0% { transform: scale(0) rotate(-10deg); opacity: 0; }
+  70% { transform: scale(1.2) rotate(4deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* ==========================================
+  Responsive
+========================================== */ 
+@media (max-width: 520px) {
+  .card { width: 62px; height: 62px; }
+  .jb-board { gap: 7px; }
+  .config-grid { grid-template-columns: 1fr; }
+  .modal-box { padding: 28px 24px; }
+}
+
+@media (max-width: 380px) {
+  .card { width: 52px; height: 52px; }
+  .card-back::before { font-size: 18px; }
+}
