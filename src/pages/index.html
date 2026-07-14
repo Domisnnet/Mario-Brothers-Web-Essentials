@@ -5,31 +5,49 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Site do filme Super Mario Bros">
-  <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/estilos.css">
-  <link rel="stylesheet" href="../css/responsivo.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "@imagens/": "/src/imagens/",
+        "@css/": "/src/css/",
+        "@js/": "/src/js/",
+        "@video/": "/src/vídeo/"
+      }
+    }
+  </script>
+  <link rel="shortcut icon" href="/src/imagens/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/src/css/reset.css">
+  <link rel="stylesheet" href="/src/css/estilos.css">
+  <link rel="stylesheet" href="/src/css/responsivo.css">
   <title>Super Mario Bros - O Filme</title>
 </head>
 <body>
   <div class="fundo-video">
     <video class="video" autoplay loop muted>
-      <source src="../vídeo/mario.mp4" type="video/mp4" />
+      <source src="/src/vídeo/mario.mp4" type="video/mp4" />
     </video>
   </div>
   <header class="cabecalho">
-    <a href="#"><img class="logo" src="../imagens/logo-chapeu-mario.png" alt="logo chapéu Mario" /></a>
+    <a href="#">
+      <img class="logo" src="/src/imagens/logo-chapeu-mario.png" alt="logo chapéu Mario" />
+    </a>
   </header>
   <main class="container">
     <div class="informacoes">
-      <img class="imagem-titulo" src="../imagens/titulo.png" alt="imagem do título do filme">
-      <p class="descricao">Mario é um encanador junto com seu irmão Luigi. 
-        Um dia, eles vão parar no reino dos
-        cogumelos, governado pela Princesa Peach, mas esse Reino está ameaçado pelo terrível rei dos Koopas, que faz de tudo para conseguir escravizar o povo e tomar o poder. A única esperança é a dupla de encanadores Mario e Luigi.</p>
+      <img class="imagem-titulo" src="/src/imagens/titulo.png" alt="imagem do título do filme">
+      <p class="descricao">
+        Mario é um encanador junto com seu irmão Luigi. 
+        Um dia, eles vão parar no reino dos cogumelos, governado pela Princesa Peach,
+        mas esse Reino está ameaçado pelo terrível rei dos Koopas, que faz de tudo
+        para conseguir escravizar o povo e tomar o poder. A única esperança é a dupla
+        de encanadores Mario e Luigi.
+      </p>
       <button class="botao-trailer">Veja o Trailer</button>
-      <button class="botao-criar-jogo" onclick="location.href='./jogo-memory.html'">Jogar Agora!!!</button>
+      <button class="botao-criar-jogo" onclick="location.href='./jogo-memory.html'">
+        Jogar Agora!!!
+      </button>
     </div>
-    <img class="mario" src="../imagens/super-mario-chars.png">
+    <img class="mario" src="/src/imagens/super-mario-chars.png">
     <div class="modal">
       <div class="conteudo-modal">
         <span class="fechar-modal">X</span>
@@ -37,6 +55,6 @@
       </div>
     </div>
   </main>
-  <script src="../js/index.js"></script>
+  <script type="module" src="/src/js/index.js"></script>
 </body>
 </html>
