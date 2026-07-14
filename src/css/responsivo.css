@@ -1,15 +1,58 @@
 @media (max-width: 1200px) {
-  body { background-color: #f44336; }
+  body { background-color: #000; overflow-x: hidden; }
   .fundo-video { display: none; }
-  .container { flex-wrap: wrap; justify-content: center; height: auto; gap: 30px; }
-  .container .mario { max-width: 50%; }
-  .container .informacoes { display: flex; align-items: center; flex-direction: column; }
-  .container .descricao { color: #ffffff; text-align: center; }
-  .container .botao-trailer { background-color: #263238; }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    height: auto;
+    min-height: 100vh;
+    padding: 24px 16px 40px;
+    text-align: center;
+  }
+
+  .informacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 680px;
+    width: 100%;
+  }
+  .imagem-titulo { width: min(100%, 420px); height: auto; }
+  .descricao { 
+    max-width: 42rem; 
+    width: 100%; 
+    font-size: clamp(1rem, 2.2vw, 1.15rem); 
+    line-height: 1.6; 
+    color: #fff; 
+    text-align: center; 
+    margin: 20px 0 28px; 
+  }
+  .mario { width: min(100%, 520px); height: auto; object-fit: contain; }
+  .botao-trailer, .botao-criar-jogo { width: min(100%, 280px); min-height: 48px; font-size: 1rem; }
+  .botao-trailer { margin-bottom: 14px; background-color: #263238; }
+  .botao-criar-jogo { background-color: #263238; }
+}
+
+@media (max-width: 768px) {
+  .container { padding: 20px 14px 36px; gap: 20px; }
+  .informacoes { max-width: 100%; }
+  .imagem-titulo { width: min(100%, 340px); }
+  .descricao { font-size: 0.98rem; line-height: 1.55; margin: 16px 0 22px; }
+  .mario { width: min(100%, 420px); }
+  .botao-trailer, .botao-criar-jogo { width: min(100%, 260px); padding: 14px 18px; }
 }
 
 @media (max-width: 500px) {
-  .cabecalho { flex-wrap: wrap; justify-content: center; gap: 10px; }
-  .container .imagem-titulo { max-width: 75%; }
+  .cabecalho { flex-wrap: wrap; justify-content: center; gap: 10px; padding: 14px 12px; }
+  .container { padding: 18px 12px 32px; gap: 18px; }
+  .imagem-titulo { width: min(100%, 280px); }
+  .descricao { font-size: 0.95rem; line-height: 1.5; margin: 14px 0 20px; }
+  .mario { width: min(100%, 340px); }
+  .botao-trailer, .botao-criar-jogo { width: 100%; max-width: 260px; font-size: 0.98rem; 
+    padding: 14px 18px; }
+  .modal .conteudo-modal { width: min(92vw, 640px); }
   .modal .fechar-modal { width: 35px; height: 35px; line-height: 31px; font-size: 18px; }
 }
