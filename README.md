@@ -11,7 +11,7 @@
 ![Hosting](https://img.shields.io/badge/GitHub%20Pages-181717?style=flat-square&logo=github&logoColor=white)
 [![Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/Domisnnet/Mario-Brothers-Web-Essentials/blob/main/LICENSE)
 
-![Super Mario Bros - O Filme](./imagens/mario.png)
+![Super Mario Bros - O Filme](src/imagens/mario.png)
 
 Bem-vindo ao repositório oficial do **Super Mario Bros - O Filme**! Esta é uma landing page imersiva e responsiva criada com **HTML, CSS e JavaScript Vanilla**, inspirada no universo visual do filme da Illumination/Nintendo. O projeto apresenta um vídeo de fundo em loop, um modal premium com o trailer oficial e um design temático completo.
 
@@ -46,7 +46,7 @@ Clique no botão abaixo para entrar no Reino dos Cogumelos:
 
 <div align="left">
   <a href="https://domisnnet.github.io/Mario-Brothers-Web-Essentials/" target="_blank">
-    <img alt="Botão Acessar" src="imagens/botão.webp" height="70" width="70" />
+    <img alt="Botão Acessar" src="src/imagens/botão.webp" height="70" width="70" />
   </a>
 </div>
 
@@ -165,5 +165,5 @@ Este projeto está sob a [![Licença MIT](https://img.shields.io/badge/License-M
 <h2 id="perfil-do-github">12. 👨‍💻 Perfil do GitHub</h2>
 
 <a href="https://github.com/Domisnnet">
-  <img src="imagens/DomisDev.png" width="90" style="border-radius: 50%" alt="DomisDev GitHub">
+  <img src="src/imagens/DomisDev.png" width="90" style="border-radius: 50%" alt="DomisDev GitHub">
 </a>
