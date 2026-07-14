@@ -1,0 +1,87 @@
+:root {
+  --bg: #0b3b5c;
+  --panel: #fff;
+  --accent: #e23e3e;
+}
+body {
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  background: linear-gradient(180deg, #071428 0%, #0b3b5c 100%);
+  color: #fff;
+}
+.jb-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+}
+.jb-header .voltar {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+}
+.jb-config label {
+  display: block;
+  margin-bottom: 8px;
+}
+.jb-config select {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  border-radius: 4px;
+}
+.jb-config button {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+.status {
+  margin-top: 8px;
+  font-size: 14px;
+}
+.jb-board-wrap {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jb-board {
+  display: grid;
+  gap: 4px;
+  background: transparent;
+  padding: 10px;
+}
+.cell {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(180deg, #ffd27a, #f79e1b);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.cell.square-dark {
+  background: linear-gradient(180deg, #f2d580, #d99a1a);
+}
+.token {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.55);
+   border: 2px solid rgba(255, 255, 255, 0.85);
+   background-color: transparent;

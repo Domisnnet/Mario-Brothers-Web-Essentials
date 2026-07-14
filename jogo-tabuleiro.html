@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jogo de Tabuleiro - Irmãos Mário</title>
+    <link rel="stylesheet" href="./css/jogo-tabuleiro.css">
+</head>
+<body>
+    <header class="jb-header">
+        <a href="index.html" class="voltar">← Voltar</a>
+        <h1>Jogo de Tabuleiro - Irmãos Mário</h1>
+    </header>
+    <main class="jb-main">
+        <section class="jb-config">
+            <label>Jogadores:
+                <select id="players">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4" selected>4</option>
+                </select>
+            </label>
+            <label>Tamanho do tabuleiro:
+                <select id="size">
+                    <option value="6">6 x 6</option>
+                    <option value="8" selected>8 x 8</option>
+                </select>
+            </label>
+            <button id="createBtn">Criar tabuleiro</button>
+            <button id="rollBtn" disabled>Rolar dado</button>
+            <div id="status" class="status">Pronto</div>
+        </section>
+        <section id="boardWrap" class="jb-board-wrap">
+            <div id="board" class="jb-board"></div>
+        </section>
+    </main>
+    <script src="./js/boardgame.js"></script>
+</body>
+</html>
