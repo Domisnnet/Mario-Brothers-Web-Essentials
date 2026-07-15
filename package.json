@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "export-characters": "node scripts/export-characters.js"
+    "export-characters": "node scripts/export-characters.js",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "jimp": "^0.22.10"
