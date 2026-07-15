@@ -1,5 +1,5 @@
 import '@css/reset.css';
-import '@css/jogo-memory.css';
+import '@css/jogo.css';
 import marioImg from '@imagens/characters/mario.png';
 import luigiImg from '@imagens/characters/luigi.png';
 import peachImg from '@imagens/characters/peach.png';
