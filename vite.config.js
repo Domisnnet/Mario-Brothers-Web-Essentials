@@ -15,7 +15,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'index.html'),
-        jogo: path.resolve(__dirname, 'jogo.html'),
+        jogo: path.resolve(__dirname, 'src/page/jogo.html'),
       },
       output: {
         entryFileNames: (chunk) => {
