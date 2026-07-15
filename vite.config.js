@@ -8,7 +8,14 @@ export default defineConfig({
       '@css': path.resolve(__dirname, 'src/css'),
       '@js': path.resolve(__dirname, 'src/js'),
       '@video': path.resolve(__dirname, 'src/video'),
-      '@page' : path.resolve(__dirname, 'src/page'),
+    },
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+        jogo: path.resolve(__dirname, 'src/page/jogo-memory.html'),
+      },
     },
   },
 });
