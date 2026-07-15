@@ -7,14 +7,15 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        'page/jogo': resolve(__dirname, 'src/page/jogo.html'),
+        jogo: resolve(__dirname, 'src/page/jogo.html'),
       },
       output: {
         entryFileNames: (chunk) => {
-          if (chunk.name === 'page/jogo') { return 'page/jogo.html'; }
+          if (chunk.name === 'jogo') { return 'jogo.html'; }
           if (chunk.name === 'main') { return 'index.html'; }
           return '[name].html';
         },
+        assetFileNames: 'assets/[name]-[hash][extname]',
       },
     },
   },
