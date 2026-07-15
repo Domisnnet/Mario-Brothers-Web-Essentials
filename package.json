@@ -7,6 +7,7 @@
     "export-characters": "node scripts/export-characters.js"
   },
   "dependencies": {
-    "jimp": "^0.22.10"
+    "jimp": "^0.22.10",
+    "vite": "^8.1.4"
   }
 }
