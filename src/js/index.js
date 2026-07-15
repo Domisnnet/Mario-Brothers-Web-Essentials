@@ -2,7 +2,7 @@ const botaoTrailer = document.querySelector(".botao-trailer");
 const botaoFecharModal = document.querySelector(".fechar-modal");
 const video = document.getElementById("video");
 const modal = document.querySelector(".modal");
-const linkDoVideo = "/src/vídeo/mario.mp4";
+const linkDoVideo = "src/video/mario.mp4";
 
 function alternarModal(){ modal.classList.toggle("aberto"); }
 botaoTrailer.addEventListener("click", () => { 
