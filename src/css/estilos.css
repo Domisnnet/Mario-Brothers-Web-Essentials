@@ -59,7 +59,7 @@ body {
 }
 
 .container .botao-trailer:hover {
-  transform: scale(1.1)
+  transform: scale(1.1);
 }
 
 .container .botao-criar-jogo {
@@ -78,7 +78,7 @@ body {
 }
 
 .container .botao-criar-jogo:hover {
-  transform: scale(1.1)
+  transform: scale(1.1);
 }
 
 img,
@@ -106,13 +106,18 @@ video {
 }
 
 .fundo-video::after {
-  content: "";
+  content: '';
   height: 100vh;
   width: 100vw;
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
 .modal {
@@ -124,7 +129,9 @@ video {
   background-color: rgba(5, 5, 5, 0.85);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  transition:
+    opacity 0.4s ease-in-out,
+    visibility 0.4s ease-in-out;
 }
 
 .conteudo-modal {
@@ -169,7 +176,9 @@ video {
   height: auto;
   border-radius: 12px;
   border: 3px solid #ff0021;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 0, 33, 0.4);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(255, 0, 33, 0.4);
   outline: none;
   background-color: #000;
 }

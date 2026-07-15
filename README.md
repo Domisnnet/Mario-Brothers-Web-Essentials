@@ -19,23 +19,23 @@ Bem-vindo ao repositório oficial do **Super Mario Bros - O Filme**! Esta é uma
 
 ## 📚 Tabela de Conteúdo
 
-| 💻 O Projeto | 🛠️ Técnico | 🤝 Comunidade |
-| :--------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: |
-| [![1. Sobre](https://img.shields.io/badge/1%20-%20Sobre-4CAF50)](#sobre-o-projeto) | [![5. Destaques](https://img.shields.io/badge/5%20-%20Destaques-607D8B)](#destaques-tecnicos) | [![9. Código](https://img.shields.io/badge/9%20-%20Código-795548)](#codigo-fonte) |
-| [![2. Techs](https://img.shields.io/badge/2%20-%20Techs-2196F3)](#tecnologias-utilizadas) | [![6. Instalação](https://img.shields.io/badge/6%20-%20Instalação-009688)](#instalacao) | [![10. Créditos](https://img.shields.io/badge/10%20-%20Créditos-607D8B)](#creditos) |
-| [![3. Acessar](https://img.shields.io/badge/3%20-%20Acessar-FF9800)](#como-acessar) | [![7. Contribuir](https://img.shields.io/badge/7%20-%20Contribuir-3F51B5)](#como-contribuir) | [![11. Licença](https://img.shields.io/badge/11%20-%20Licença-E91E63)](#licenca) |
-| [![4. Funções](https://img.shields.io/badge/4%20-%20Funções-9C27B0)](#funcionalidades) | [![8. FAQ](https://img.shields.io/badge/8%20-%20FAQ-FFC107)](#faq) | [![12. Perfil](https://img.shields.io/badge/12%20-%20Perfil-212121)](#perfil-do-github) |
+|                                       💻 O Projeto                                        |                                          🛠️ Técnico                                           |                                      🤝 Comunidade                                      |
+| :---------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: |
+|    [![1. Sobre](https://img.shields.io/badge/1%20-%20Sobre-4CAF50)](#sobre-o-projeto)     | [![5. Destaques](https://img.shields.io/badge/5%20-%20Destaques-607D8B)](#destaques-tecnicos) |    [![9. Código](https://img.shields.io/badge/9%20-%20Código-795548)](#codigo-fonte)    |
+| [![2. Techs](https://img.shields.io/badge/2%20-%20Techs-2196F3)](#tecnologias-utilizadas) |    [![6. Instalação](https://img.shields.io/badge/6%20-%20Instalação-009688)](#instalacao)    |   [![10. Créditos](https://img.shields.io/badge/10%20-%20Créditos-607D8B)](#creditos)   |
+|    [![3. Acessar](https://img.shields.io/badge/3%20-%20Acessar-FF9800)](#como-acessar)    | [![7. Contribuir](https://img.shields.io/badge/7%20-%20Contribuir-3F51B5)](#como-contribuir)  |    [![11. Licença](https://img.shields.io/badge/11%20-%20Licença-E91E63)](#licenca)     |
+|  [![4. Funções](https://img.shields.io/badge/4%20-%20Funções-9C27B0)](#funcionalidades)   |              [![8. FAQ](https://img.shields.io/badge/8%20-%20FAQ-FFC107)](#faq)               | [![12. Perfil](https://img.shields.io/badge/12%20-%20Perfil-212121)](#perfil-do-github) |
 
 ---
 
 <h2 id="tecnologias-utilizadas">2. ⚙️ Tecnologias Utilizadas</h2>
 
-| Camada | Tecnologias | Descrição |
-| :-------------- | :------------------------------------------------------------------------------------------------------------------ | :--------------------------------------------------------------- |
-| **Estrutura** | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) | Marcação semântica da landing page. |
-| **Estilo** | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) | Estilos, animações e layout responsivo com Vanilla CSS. |
-| **Interação** | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) | Modal de trailer com controle de vídeo HTML5 nativo. |
-| **Hosting** | ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-181717?style=flat-square&logo=github&logoColor=white) | Hospedagem estática via CDN do GitHub, custo zero. |
+| Camada         | Tecnologias                                                                                                       | Descrição                                               |
+| :------------- | :---------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------ |
+| **Estrutura**  | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)                  | Marcação semântica da landing page.                     |
+| **Estilo**     | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)                     | Estilos, animações e layout responsivo com Vanilla CSS. |
+| **Interação**  | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)   | Modal de trailer com controle de vídeo HTML5 nativo.    |
+| **Hosting**    | ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-181717?style=flat-square&logo=github&logoColor=white) | Hospedagem estática via CDN do GitHub, custo zero.      |
 | **Tipografia** | ![Google Fonts](https://img.shields.io/badge/Google%20Fonts-4285F4?style=flat-square&logo=google&logoColor=white) | Fonte Poppins em múltiplos pesos para leitura elegante. |
 
 ---
@@ -54,13 +54,13 @@ Clique no botão abaixo para entrar no Reino dos Cogumelos:
 
 <h2 id="funcionalidades">4. 🧩 Funcionalidades Principais</h2>
 
-| Funcionalidade | Descrição |
-| :-------------------------------- | :------------------------------------------------------------------------------------------ |
-| 🎬 **Vídeo de Fundo em Loop** | Vídeo `mario.mp4` em autoplay, mudo e totalmente responsivo cobrindo a viewport. |
-| 🪟 **Modal com Trailer** | Modal com backdrop escurecido e transição suave para exibir o trailer do filme. |
-| ▶️ **Player HTML5 Premium** | Elemento `<video>` nativo com bordas arredondadas, brilho vermelho e controles nativos. |
-| 🔴 **Botão de Fechar Animado** | Botão circular que roda 90° e muda de cor no hover para uma UX premium. |
-| 📱 **Layout Responsivo** | Media queries adaptam o conteúdo para desktop, tablet e mobile sem quebrar o design. |
+| Funcionalidade                  | Descrição                                                                                |
+| :------------------------------ | :--------------------------------------------------------------------------------------- |
+| 🎬 **Vídeo de Fundo em Loop**   | Vídeo `mario.mp4` em autoplay, mudo e totalmente responsivo cobrindo a viewport.         |
+| 🪟 **Modal com Trailer**        | Modal com backdrop escurecido e transição suave para exibir o trailer do filme.          |
+| ▶️ **Player HTML5 Premium**     | Elemento `<video>` nativo com bordas arredondadas, brilho vermelho e controles nativos.  |
+| 🔴 **Botão de Fechar Animado**  | Botão circular que roda 90° e muda de cor no hover para uma UX premium.                  |
+| 📱 **Layout Responsivo**        | Media queries adaptam o conteúdo para desktop, tablet e mobile sem quebrar o design.     |
 | 🖼️ **Tipografia Personalizada** | Google Fonts Poppins com múltiplos pesos para hierarquia visual fiel ao estilo do filme. |
 
 ---
@@ -95,13 +95,13 @@ O GitHub Pages atualiza automaticamente em alguns segundos após o push.
 
 Siga os passos abaixo para sugerir melhorias:
 
-| Fase | Ação | Link / Comando |
+|  Fase  | Ação       | Link / Comando                                                                                                                                               |
 | :----: | :--------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **01** | **Fork** | [![Fork](https://img.shields.io/badge/-Fazer%20Fork-blue?style=flat-square&logo=github)](https://github.com/Domisnnet/Mario-Brothers-Web-Essentials/fork) |
-| **02** | **Branch** | `git checkout -b feature/MinhaMelhoria` |
-| **03** | **Commit** | `git commit -m 'feat: add nova funcionalidade'` |
-| **04** | **Push** | `git push origin feature/MinhaMelhoria` |
-| **05** | **PR** | [![Abrir PR](https://img.shields.io/badge/-Abrir%20PR-green?style=flat-square&logo=git)](https://github.com/Domisnnet/Mario-Brothers-Web-Essentials/compare) |
+| **01** | **Fork**   | [![Fork](https://img.shields.io/badge/-Fazer%20Fork-blue?style=flat-square&logo=github)](https://github.com/Domisnnet/Mario-Brothers-Web-Essentials/fork)    |
+| **02** | **Branch** | `git checkout -b feature/MinhaMelhoria`                                                                                                                      |
+| **03** | **Commit** | `git commit -m 'feat: add nova funcionalidade'`                                                                                                              |
+| **04** | **Push**   | `git push origin feature/MinhaMelhoria`                                                                                                                      |
+| **05** | **PR**     | [![Abrir PR](https://img.shields.io/badge/-Abrir%20PR-green?style=flat-square&logo=git)](https://github.com/Domisnnet/Mario-Brothers-Web-Essentials/compare) |
 
 ### 🐛 Encontrou um problema?
 
@@ -147,12 +147,12 @@ Explore o projeto completo no repositório oficial:
 
 <h2 id="creditos">10. 📝 Créditos & Reconhecimentos</h2>
 
-| Atribuição | Responsável / Recurso | Descrição |
-| :------------------ | :--------------------------- | :------------------------------------------------------ |
-| **Frontend Dev** | **DomisDev** | Design, HTML/CSS/JS e configuração de deploy. |
-| **Fonte do Filme** | **Nintendo / Illumination** | Personagens, logotipo e identidade visual do universo. |
-| **Infraestrutura** | **GitHub Pages** | Hospedagem estática gratuita via CDN global. |
-| **Apoio Técnico** | **Google Gemini** | Padronização, refinamento e auxílio no desenvolvimento. |
+| Atribuição         | Responsável / Recurso       | Descrição                                               |
+| :----------------- | :-------------------------- | :------------------------------------------------------ |
+| **Frontend Dev**   | **DomisDev**                | Design, HTML/CSS/JS e configuração de deploy.           |
+| **Fonte do Filme** | **Nintendo / Illumination** | Personagens, logotipo e identidade visual do universo.  |
+| **Infraestrutura** | **GitHub Pages**            | Hospedagem estática gratuita via CDN global.            |
+| **Apoio Técnico**  | **Google Gemini**           | Padronização, refinamento e auxílio no desenvolvimento. |
 
 ---
 

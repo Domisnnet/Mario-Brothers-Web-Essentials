@@ -5,37 +5,37 @@ import luigiImg from '@imagens/characters/luigi.png';
 import peachImg from '@imagens/characters/peach.png';
 import toadImg from '@imagens/characters/toad.png';
 
-document.addEventListener("DOMContentLoaded", () => {
-  const startBtn = document.getElementById("startBtn");
-  const boardEl = document.getElementById("board");
-  const scoreboard = document.getElementById("scoreboard");
-  const timerDisplay = document.getElementById("timerDisplay");
-  const movesDisplay = document.getElementById("movesDisplay");
-  const pairsDisplay = document.getElementById("pairsDisplay");
-  const winModal = document.getElementById("winModal");
-  const winMsg = document.getElementById("winMsg");
-  const replayBtn = document.getElementById("replayBtn");
-  const menuBtn = document.getElementById("menuBtn");
-  const bgStars = document.getElementById("bgStars");
+document.addEventListener('DOMContentLoaded', () => {
+  const startBtn = document.getElementById('startBtn');
+  const boardEl = document.getElementById('board');
+  const scoreboard = document.getElementById('scoreboard');
+  const timerDisplay = document.getElementById('timerDisplay');
+  const movesDisplay = document.getElementById('movesDisplay');
+  const pairsDisplay = document.getElementById('pairsDisplay');
+  const winModal = document.getElementById('winModal');
+  const winMsg = document.getElementById('winMsg');
+  const replayBtn = document.getElementById('replayBtn');
+  const menuBtn = document.getElementById('menuBtn');
+  const bgStars = document.getElementById('bgStars');
   const CHARACTERS = [
-    { id: "mario", src: marioImg, label: "Mario" },
-    { id: "luigi", src: luigiImg, label: "Luigi" },
-    { id: "peach", src: peachImg, label: "Peach" },
-    { id: "toad", src: toadImg, label: "Toad" },
+    { id: 'mario', src: marioImg, label: 'Mario' },
+    { id: 'luigi', src: luigiImg, label: 'Luigi' },
+    { id: 'peach', src: peachImg, label: 'Peach' },
+    { id: 'toad', src: toadImg, label: 'Toad' },
   ];
   const ITEMS = [
-    { id: "mushroom", emoji: "🍄", label: "Cogumelo" },
-    { id: "star", emoji: "⭐", label: "Estrela" },
-    { id: "coin", emoji: "💰", label: "Moeda" },
-    { id: "flower", emoji: "🌸", label: "Flor" },
-    { id: "shell", emoji: "🐚", label: "Concha" },
-    { id: "bomb", emoji: "💣", label: "Bomba" },
-    { id: "trophy", emoji: "🏆", label: "Troféu" },
-    { id: "heart", emoji: "❤️", label: "Coração" },
-    { id: "boot", emoji: "🦕", label: "Yoshi" },
-    { id: "castle", emoji: "🏰", label: "Castelo" },
-    { id: "flag", emoji: "🏁", label: "Bandeira" },
-    { id: "fire", emoji: "🔥", label: "Fogo" },
+    { id: 'mushroom', emoji: '🍄', label: 'Cogumelo' },
+    { id: 'star', emoji: '⭐', label: 'Estrela' },
+    { id: 'coin', emoji: '💰', label: 'Moeda' },
+    { id: 'flower', emoji: '🌸', label: 'Flor' },
+    { id: 'shell', emoji: '🐚', label: 'Concha' },
+    { id: 'bomb', emoji: '💣', label: 'Bomba' },
+    { id: 'trophy', emoji: '🏆', label: 'Troféu' },
+    { id: 'heart', emoji: '❤️', label: 'Coração' },
+    { id: 'boot', emoji: '🦕', label: 'Yoshi' },
+    { id: 'castle', emoji: '🏰', label: 'Castelo' },
+    { id: 'flag', emoji: '🏁', label: 'Bandeira' },
+    { id: 'fire', emoji: '🔥', label: 'Fogo' },
   ];
   const DIFFICULTY = {
     easy: { cols: 4, pairs: 8 },
@@ -50,12 +50,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let totalPairs = 0;
   let timerSec = 0;
   let timerInterval = null;
-  let currentDifficulty = "medium";
-  let currentTheme = "characters";
+  let currentDifficulty = 'medium';
+  let currentTheme = 'characters';
   function spawnStars() {
-    bgStars.innerHTML = "";
+    bgStars.innerHTML = '';
     for (let i = 0; i < 70; i++) {
-      const s = document.createElement("span");
+      const s = document.createElement('span');
       s.style.cssText = `
         left: ${Math.random() * 100}%;
         top:  ${Math.random() * 100}%;
@@ -66,28 +66,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   function showToast(msg, duration = 1200) {
-    let toast = document.querySelector(".toast");
+    let toast = document.querySelector('.toast');
     if (!toast) {
-      toast = document.createElement("div");
-      toast.className = "toast";
+      toast = document.createElement('div');
+      toast.className = 'toast';
       document.body.appendChild(toast);
     }
     toast.textContent = msg;
-    toast.classList.add("show");
+    toast.classList.add('show');
     clearTimeout(toast._t);
-    toast._t = setTimeout(() => toast.classList.remove("show"), duration);
+    toast._t = setTimeout(() => toast.classList.remove('show'), duration);
   }
   function startTimer() {
     clearInterval(timerInterval);
     timerSec = 0;
     timerInterval = setInterval(() => {
       timerSec++;
-      const m = String(Math.floor(timerSec / 60)).padStart(2, "0");
-      const s = String(timerSec % 60).padStart(2, "0");
+      const m = String(Math.floor(timerSec / 60)).padStart(2, '0');
+      const s = String(timerSec % 60).padStart(2, '0');
       timerDisplay.textContent = `${m}:${s}`;
     }, 1000);
   }
-  function stopTimer() { clearInterval(timerInterval); }
+  function stopTimer() {
+    clearInterval(timerInterval);
+  }
   function shuffle(arr) {
     const a = [...arr];
     for (let i = a.length - 1; i > 0; i--) {
@@ -97,9 +99,10 @@ document.addEventListener("DOMContentLoaded", () => {
     return a;
   }
   function buildDeck(numPairs) {
-    const allItems = [ ...CHARACTERS, ...ITEMS ];
+    const allItems = [...CHARACTERS, ...ITEMS];
     const pool = shuffle(allItems).slice(0, numPairs);
-    const itemsOnly = currentTheme === "items" ? shuffle(ITEMS).slice(0, numPairs) : pool;
+    const itemsOnly =
+      currentTheme === 'items' ? shuffle(ITEMS).slice(0, numPairs) : pool;
     const deck = [];
     itemsOnly.forEach((item) => {
       for (let c = 0; c < 2; c++) {
@@ -116,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return shuffle(deck);
   }
   function renderBoard(config) {
-    boardEl.innerHTML = "";
+    boardEl.innerHTML = '';
     boardEl.style.gridTemplateColumns = `repeat(${config.cols}, 1fr)`;
     cards = buildDeck(config.pairs);
     totalPairs = config.pairs;
@@ -126,25 +129,29 @@ document.addEventListener("DOMContentLoaded", () => {
     locked = false;
     updateScoreboard();
     cards.forEach((card, idx) => {
-      const cardEl = document.createElement("div");
-      cardEl.className = "card";
+      const cardEl = document.createElement('div');
+      cardEl.className = 'card';
       cardEl.dataset.idx = idx + 1;
-      cardEl.setAttribute("role", "button");
+      cardEl.setAttribute('role', 'button');
       cardEl.tabIndex = 0;
       cardEl.innerHTML = `
         <div class="card-inner">
           <div class="card-face card-back"></div>
           <div class="card-face card-front">
-            ${card.src
-          ? `<img src="${card.src}" alt="${card.label}" draggable="false">`
-          : `<span style="font-size:38px;line-height:1">${card.emoji}</span>`
-        }
+            ${
+              card.src
+                ? `<img src="${card.src}" alt="${card.label}" draggable="false">`
+                : `<span style="font-size:38px;line-height:1">${card.emoji}</span>`
+            }
           </div>
         </div>`;
       card.el = cardEl;
-      cardEl.addEventListener("click", () => onCardClick(card));
-      cardEl.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onCardClick(card); }
+      cardEl.addEventListener('click', () => onCardClick(card));
+      cardEl.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onCardClick(card);
+        }
       });
       boardEl.appendChild(cardEl);
     });
@@ -163,8 +170,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   function flipCard(card, faceUp) {
-    if (faceUp) card.el.classList.add("flipped");
-    else card.el.classList.remove("flipped");
+    if (faceUp) card.el.classList.add('flipped');
+    else card.el.classList.remove('flipped');
   }
   function checkMatch() {
     const [a, b] = flipped;
@@ -173,8 +180,8 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         a.matched = true;
         b.matched = true;
-        a.el.classList.add("matched");
-        b.el.classList.add("matched");
+        a.el.classList.add('matched');
+        b.el.classList.add('matched');
         matchedPairs++;
         updateScoreboard();
         flipped = [];
@@ -182,46 +189,56 @@ document.addEventListener("DOMContentLoaded", () => {
         if (matchedPairs === totalPairs) onWin();
       }, 500);
     } else {
-      a.el.classList.add("error");
-      b.el.classList.add("error");
+      a.el.classList.add('error');
+      b.el.classList.add('error');
       setTimeout(() => {
-        a.el.classList.remove("error");
-        b.el.classList.remove("error");
+        a.el.classList.remove('error');
+        b.el.classList.remove('error');
         flipCard(a, false);
         flipCard(b, false);
         flipped = [];
-        if (currentDifficulty !== "easy") shuffleUnmatched();
+        if (currentDifficulty !== 'easy') shuffleUnmatched();
         locked = false;
       }, 900);
     }
   }
   function shuffleUnmatched() {
-    const unmatched = cards.filter(c => !c.matched);
+    const unmatched = cards.filter((c) => !c.matched);
     if (unmatched.length === 0) return;
-    unmatched.forEach(c => {
-      c.el.style.transition = "transform 0.2s, opacity 0.2s";
-      c.el.style.transform = "scale(0.7)";
-      c.el.style.opacity = "0.3";
+    unmatched.forEach((c) => {
+      c.el.style.transition = 'transform 0.2s, opacity 0.2s';
+      c.el.style.transform = 'scale(0.7)';
+      c.el.style.opacity = '0.3';
     });
     setTimeout(() => {
-      const positions = unmatched.map(c => c.el);
-      const shuffledData = shuffle(unmatched.map(c => ({ pairId: c.pairId, src: c.src, emoji: c.emoji, label: c.label })));
+      const positions = unmatched.map((c) => c.el);
+      const shuffledData = shuffle(
+        unmatched.map((c) => ({
+          pairId: c.pairId,
+          src: c.src,
+          emoji: c.emoji,
+          label: c.label,
+        }))
+      );
       unmatched.forEach((card, i) => {
         const data = shuffledData[i];
         card.pairId = data.pairId;
         card.src = data.src;
         card.emoji = data.emoji;
         card.label = data.label;
-        const front = card.el.querySelector(".card-front");
+        const front = card.el.querySelector('.card-front');
         if (data.src) {
           front.innerHTML = `<img src="${data.src}" alt="${data.label}" draggable="false">`;
         } else {
           front.innerHTML = `<span style="font-size:38px;line-height:1">${data.emoji}</span>`;
         }
-        card.el.setAttribute("aria-label", "Carta " + (card.el.dataset.idx || ""));
-        card.el.style.transform = "";
-        card.el.style.opacity = "";
-        card.el.style.transition = "";
+        card.el.setAttribute(
+          'aria-label',
+          'Carta ' + (card.el.dataset.idx || '')
+        );
+        card.el.style.transform = '';
+        card.el.style.opacity = '';
+        card.el.style.transition = '';
       });
     }, 250);
   }
@@ -231,8 +248,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   function onWin() {
     stopTimer();
-    const m = String(Math.floor(timerSec / 60)).padStart(2, "0");
-    const s = String(timerSec % 60).padStart(2, "0");
+    const m = String(Math.floor(timerSec / 60)).padStart(2, '0');
+    const s = String(timerSec % 60).padStart(2, '0');
     winMsg.innerHTML = `
       Você encontrou todos os <strong>${totalPairs} pares</strong>!<br>
       ⏱ Tempo: <strong>${m}:${s}</strong> &nbsp;|&nbsp; 🃏 Jogadas: <strong>${moves}</strong>
@@ -240,21 +257,24 @@ document.addEventListener("DOMContentLoaded", () => {
     winModal.hidden = false;
   }
   function startGame() {
-    currentDifficulty = document.getElementById("difficulty").value;
-    currentTheme = document.getElementById("theme").value;
+    currentDifficulty = document.getElementById('difficulty').value;
+    currentTheme = document.getElementById('theme').value;
     const config = DIFFICULTY[currentDifficulty];
     winModal.hidden = true;
     scoreboard.hidden = false;
     renderBoard(config);
     startTimer();
   }
-  startBtn.addEventListener("click", startGame);
-  replayBtn.addEventListener("click", () => { winModal.hidden = true; startGame(); });
-  menuBtn.addEventListener("click", () => {
+  startBtn.addEventListener('click', startGame);
+  replayBtn.addEventListener('click', () => {
+    winModal.hidden = true;
+    startGame();
+  });
+  menuBtn.addEventListener('click', () => {
     winModal.hidden = true;
     stopTimer();
     scoreboard.hidden = true;
-    boardEl.innerHTML = "";
+    boardEl.innerHTML = '';
   });
   spawnStars();
 });

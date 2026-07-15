@@ -140,16 +140,18 @@ body {
 .config-item select {
   width: 100%;
   padding: 9px 10px;
-  border-radius: 12px;              
-  border: 1.5px solid rgba(255, 213, 39, 0.4); 
+  border-radius: 12px;
+  border: 1.5px solid rgba(255, 213, 39, 0.4);
   background: rgba(255, 255, 255, 0.08);
   color: var(--green);
   font-family: var(--font-main);
   font-size: 13px;
   font-weight: bold;
   cursor: pointer;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  appearance: none;                  
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  appearance: none;
   box-shadow: 0 0 0 2px rgba(255, 213, 39, 0.08) inset;
 }
 
@@ -161,21 +163,21 @@ body {
 }
 
 .config-item select option {
-  background: #0b3b5c;              
-  color: var(--gold); 
-  font-weight: bold;                  
-  border-radius: var(--radius);             
+  background: #0b3b5c;
+  color: var(--gold);
+  font-weight: bold;
+  border-radius: var(--radius);
   padding: 6px 8px;
 }
 
-.config-item select option[value="easy"],
-.config-item select option[value="characters"] {
-  color: #8aff8a; 
+.config-item select option[value='easy'],
+.config-item select option[value='characters'] {
+  color: #8aff8a;
   font-weight: bold;
 }
 
-.config-item select option[value="hard"] {
-  color: #ff6b6b; 
+.config-item select option[value='hard'] {
+  color: #ff6b6b;
   font-weight: bold;
 }
 
@@ -197,7 +199,9 @@ body {
   cursor: pointer;
   letter-spacing: 1px;
   box-shadow: 0 4px 18px rgba(226, 62, 62, 0.5);
-  transition: transform 0.15s, box-shadow 0.15s;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
   position: relative;
   overflow: hidden;
 }
@@ -206,7 +210,11 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), transparent);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
   pointer-events: none;
 }
 
@@ -433,7 +441,9 @@ body {
   font-weight: 700;
   font-size: var(--font-size-sm);
   cursor: pointer;
-  transition: transform 0.15s, box-shadow 0.15s;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
 }
 
 .btn-replay {
@@ -469,7 +479,9 @@ body {
   border-radius: 10px;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.25s, transform 0.25s;
+  transition:
+    opacity 0.25s,
+    transform 0.25s;
   z-index: 9999;
   white-space: nowrap;
 }
@@ -481,53 +493,109 @@ body {
 
 /* ==========================================
   Animations
-========================================== */ 
+========================================== */
 @keyframes twinkle {
-  0%, 100% { opacity: 0.2; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.6); }
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.6);
+  }
 }
 
 @keyframes matchPop {
-  0% { transform: rotateY(180deg) scale(1); }
-  50% { transform: rotateY(180deg) scale(1.18); }
-  100% { transform: rotateY(180deg) scale(1); }
+  0% {
+    transform: rotateY(180deg) scale(1);
+  }
+  50% {
+    transform: rotateY(180deg) scale(1.18);
+  }
+  100% {
+    transform: rotateY(180deg) scale(1);
+  }
 }
 
 @keyframes shake {
-  0%, 100% { transform: rotateY(180deg) translateX(0); }
-  20% { transform: rotateY(180deg) translateX(-5px); }
-  40% { transform: rotateY(180deg) translateX(5px); }
-  60% { transform: rotateY(180deg) translateX(-4px); }
-  80% { transform: rotateY(180deg) translateX(4px); }
+  0%,
+  100% {
+    transform: rotateY(180deg) translateX(0);
+  }
+  20% {
+    transform: rotateY(180deg) translateX(-5px);
+  }
+  40% {
+    transform: rotateY(180deg) translateX(5px);
+  }
+  60% {
+    transform: rotateY(180deg) translateX(-4px);
+  }
+  80% {
+    transform: rotateY(180deg) translateX(4px);
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  from { transform: translateY(40px) scale(0.95); opacity: 0; }
-  to { transform: translateY(0) scale(1); opacity: 1; }
+  from {
+    transform: translateY(40px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes starBounce {
-  0% { transform: scale(0) rotate(-10deg); opacity: 0; }
-  70% { transform: scale(1.2) rotate(4deg); }
-  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  0% {
+    transform: scale(0) rotate(-10deg);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.2) rotate(4deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
 }
 
 /* ==========================================
   Responsive
-========================================== */ 
+========================================== */
 @media (max-width: 520px) {
-  .card { width: 62px; height: 62px; }
-  .jb-board { gap: 7px; }
-  .config-grid { grid-template-columns: 1fr; }
-  .modal-box { padding: 28px 24px; }
+  .card {
+    width: 62px;
+    height: 62px;
+  }
+  .jb-board {
+    gap: 7px;
+  }
+  .config-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-box {
+    padding: 28px 24px;
+  }
 }
 
 @media (max-width: 380px) {
-  .card { width: 52px; height: 52px; }
-  .card-back::before { font-size: 18px; }
+  .card {
+    width: 52px;
+    height: 52px;
+  }
+  .card-back::before {
+    font-size: 18px;
+  }
 }
