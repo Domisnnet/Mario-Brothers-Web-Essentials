@@ -1,3 +1,10 @@
+import '@css/reset.css';
+import '@css/jogo-memory.css';
+import marioImg from '@imagens/characters/mario.png';
+import luigiImg from '@imagens/characters/luigi.png';
+import peachImg from '@imagens/characters/peach.png';
+import toadImg from '@imagens/characters/toad.png';
+
 document.addEventListener("DOMContentLoaded", () => {
   const startBtn = document.getElementById("startBtn");
   const boardEl = document.getElementById("board");
@@ -11,10 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.getElementById("menuBtn");
   const bgStars = document.getElementById("bgStars");
   const CHARACTERS = [
-    { id: "mario", src: "../imagens/characters/mario.png", label: "Mario" },
-    { id: "luigi", src: "../imagens/characters/luigi.png", label: "Luigi" },
-    { id: "peach", src: "../imagens/characters/peach.png", label: "Peach" },
-    { id: "toad", src: "../imagens/characters/toad.png", label: "Toad" },
+    { id: "mario", src: marioImg, label: "Mario" },
+    { id: "luigi", src: luigiImg, label: "Luigi" },
+    { id: "peach", src: peachImg, label: "Peach" },
+    { id: "toad", src: toadImg, label: "Toad" },
   ];
   const ITEMS = [
     { id: "mushroom", emoji: "🍄", label: "Cogumelo" },

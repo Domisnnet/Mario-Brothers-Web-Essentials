@@ -2,12 +2,17 @@
   "name": "mario-brothers-web-essentials",
   "version": "1.0.0",
   "description": "Ferramenta para exportar rostos de personagens Mario a partir do sprite.",
-  "main": "js/index.js",
+  "main": "src/js/index.js",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "export-characters": "node scripts/export-characters.js"
   },
   "dependencies": {
-    "jimp": "^0.22.10",
+    "jimp": "^0.22.10"
+  },
+  "devDependencies": {
     "vite": "^8.1.4"
   }
 }

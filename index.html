@@ -2,39 +2,25 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Site do filme Super Mario Brothers">
-  <script type="importmap">
-    {
-      "imports": {
-        "@imagens/": "/src/imagens/",
-        "@css/": "/src/css/",
-        "@js/": "/src/js/",
-        "@video/": "/src/video/"
-      }
-    }
-  </script>
-  <link rel="shortcut icon" href="src/imagens/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="src/css/reset.css">
-  <link rel="stylesheet" href="src/css/estilos.css">
-  <link rel="stylesheet" href="src/css/responsivo.css">
+  <link rel="shortcut icon" href="/src/imagens/favicon.ico" type="image/x-icon">
   <title>Super Mario Bros - O Filme</title>
 </head>
 <body>
   <div class="fundo-video">
     <video class="video" autoplay loop muted>
-      <source src="src/video/mario.mp4" type="video/mp4" />
+      <source src="/src/video/mario.mp4" type="video/mp4" />
     </video>
   </div>
   <header class="cabecalho">
     <a href="index.html">
-      <img class="logo" src="src/imagens/logo-chapeu-mario.png" alt="logo chapéu Mario" />
+      <img class="logo" src="/src/imagens/logo-chapeu-mario.png" alt="logo chapéu Mario" />
     </a>
   </header>
   <main class="container">
     <div class="informacoes">
-      <img class="imagem-titulo" src="src/imagens/titulo.png" alt="imagem do título do filme">
+      <img class="imagem-titulo" src="/src/imagens/titulo.png" alt="imagem do título do filme">
       <p class="descricao">
         Mario é um encanador junto com seu irmão Luigi. 
         Um dia, eles vão parar no reino dos cogumelos, governado pela Princesa Peach,
@@ -43,11 +29,11 @@
         de encanadores Mario e Luigi.
       </p>
       <button class="botao-trailer">Veja o Trailer</button>
-      <button class="botao-criar-jogo" onclick="location.href='src/page/jogo-memory.html'">
+      <button class="botao-criar-jogo" onclick="location.href='/src/page/jogo-memory.html'">
         Jogar Agora!!!
       </button>
     </div>
-    <img class="mario" src="src/imagens/super-mario-chars.png">
+    <img class="mario" src="/src/imagens/super-mario-chars.png">
     <div class="modal">
       <div class="conteudo-modal">
         <span class="fechar-modal">X</span>
@@ -55,6 +41,6 @@
       </div>
     </div>
   </main>
-  <script type="module" src="src/js/index.js"></script>
+  <script type="module" src="/src/js/index.js"></script>
 </body>
 </html>
