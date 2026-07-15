@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import path from 'path';
 
 export default defineConfig({
+  base: '/Mario-Brothers-Web-Essentials/',
   resolve: {
     alias: {
       '@imagens': path.resolve(__dirname, 'src/imagens'),
