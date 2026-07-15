@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="Site do jogo da memória do filme Super Mario Bros" />
-    <link rel="shortcut icon" href="@imagens/favicon.ico" type="image/x-icon" />
     <title>Jogo da Memória - Mário Brothers!!</title>
     <script type="module" crossorigin src="/Mario-Brothers-Web-Essentials/assets/page/jogo-DdUP7WIa.js"></script>
     <link rel="modulepreload" crossorigin href="/Mario-Brothers-Web-Essentials/assets/reset-C3QoB9kL.js">
@@ -58,14 +57,11 @@
     </main>
     <div class="modal-overlay" id="winModal" hidden>
       <div class="modal-box">
-        <div class="modal-stars">⭐⭐⭐⭐⭐</div>
         <h2 class="modal-title">Parabéns! 🎉🎉</h2>
         <p class="modal-msg" id="winMsg"></p>
         <div class="modal-actions">
-          <button class="btn-modal btn-replay" id="replayBtn">
-            🔄 Jogar Novamente
-          </button>
-          <button class="btn-modal btn-menu" id="menuBtn">🏠 Início</button>
+          <button class="btn-modal btn-replay" id="replayBtn">🔄 Jogar Novamente</button>
+          <button class="btn-modal btn-menu" id="menuBtn" onclick="location.href='index.html'">🏠 Início</button>
         </div>
       </div>
     </div>
