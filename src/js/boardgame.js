@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.getElementById("menuBtn");
   const bgStars = document.getElementById("bgStars");
   const CHARACTERS = [
-    { id: "mario", src: "/src/imagens/characters/mario.png", label: "Mario" },
-    { id: "luigi", src: "/src/imagens/characters/luigi.png", label: "Luigi" },
-    { id: "peach", src: "/src/imagens/characters/peach.png", label: "Peach" },
-    { id: "toad", src: "/src/imagens/characters/toad.png", label: "Toad" },
+    { id: "mario", src: "src/imagens/characters/mario.png", label: "Mario" },
+    { id: "luigi", src: "src/imagens/characters/luigi.png", label: "Luigi" },
+    { id: "peach", src: "src/imagens/characters/peach.png", label: "Peach" },
+    { id: "toad", src: "src/imagens/characters/toad.png", label: "Toad" },
   ];
   const ITEMS = [
     { id: "mushroom", emoji: "🍄", label: "Cogumelo" },
