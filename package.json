@@ -5,8 +5,7 @@
   "main": "src/js/index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run copy-html",
-    "copy-html": "mkdir dist\\page 2> NUL & copy src\\page\\jogo.html dist\\page\\jogo.html",
+    "build": "vite build",
     "preview": "vite preview",
     "export-characters": "node scripts/export-characters.js",
     "deploy": "gh-pages -d dist"

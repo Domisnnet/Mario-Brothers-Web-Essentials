@@ -1,22 +1,22 @@
 import { defineConfig } from 'vite';
-import path from 'path';
+import { resolve } from 'path';
 
 export default defineConfig({
   base: '/Mario-Brothers-Web-Essentials/',
-  resolve: {
-    alias: {
-      '@imagens': path.resolve(__dirname, 'src/imagens'),
-      '@css': path.resolve(__dirname, 'src/css'),
-      '@js': path.resolve(__dirname, 'src/js'),
-      '@video': path.resolve(__dirname, 'src/video'),
-    },
-  },
   build: {
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'index.html'),
-        jogo: path.resolve(__dirname, 'jogo.html'),
+        index: resolve(__dirname, 'index.html'),
+        jogo: resolve(__dirname, 'jogo.html')
       },
+    },
+  },
+  resolve: {
+    alias: {
+      '@imagens': resolve(__dirname, 'src/imagens'),
+      '@video': resolve(__dirname, 'src/video'),
+      '@css': resolve(__dirname, 'src/css'),
+      '@js': resolve(__dirname, 'src/js')
     },
   },
 });
