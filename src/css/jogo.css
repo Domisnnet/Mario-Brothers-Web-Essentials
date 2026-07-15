@@ -591,11 +591,6 @@ body {
 }
 
 @media (max-width: 380px) {
-  .card {
-    width: 52px;
-    height: 52px;
-  }
-  .card-back::before {
-    font-size: 18px;
-  }
+  .card { width: 52px; height: 52px; }
+  .card-back::before { font-size: 18px; }
 }
