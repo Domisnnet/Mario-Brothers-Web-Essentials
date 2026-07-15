@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="Site do jogo da memória do filme Super Mario Bros" />
     <title>Jogo da Memória - Mário Brothers!!</title>
+    <link rel="icon" href="" />
     <script type="module" crossorigin src="/Mario-Brothers-Web-Essentials/assets/jogo-kBjSnuMr.js"></script>
     <link rel="modulepreload" crossorigin href="/Mario-Brothers-Web-Essentials/assets/reset-G2HhKT95.js">
     <link rel="stylesheet" crossorigin href="/Mario-Brothers-Web-Essentials/assets/reset-Ct6muqBi.css">
@@ -17,43 +18,7 @@
       <h1>🍄 Jogo da Memória</h1>
     </header>
     <main class="jb-main">
-      <section class="jb-config">
-        <div class="config-grid">
-          <div class="config-item">
-            <label for="difficulty">Dificuldade</label>
-            <select id="difficulty">
-              <option value="easy">Fácil</option>
-              <option value="medium" selected>Médio</option>
-              <option value="hard">Difícil</option>
-            </select>
-          </div>
-          <div class="config-item">
-            <label for="theme">Itens</label>
-            <select id="theme">
-              <option value="characters">Personagem</option>
-              <option value="items">Tesouros</option>
-            </select>
-          </div>
-        </div>
-        <button id="startBtn" class="btn-start">🎮 Iniciar Jogo</button>
-      </section>
-      <div class="scoreboard" id="scoreboard" hidden>
-        <div class="score-item">
-          <span class="score-label">⏱ Tempo</span>
-          <span class="score-val" id="timerDisplay">00:00</span>
-        </div>
-        <div class="score-item">
-          <span class="score-label">🃏 Jogadas</span>
-          <span class="score-val" id="movesDisplay">0</span>
-        </div>
-        <div class="score-item">
-          <span class="score-label">✅ Pares</span>
-          <span class="score-val" id="pairsDisplay">0 / 0</span>
-        </div>
-      </div>
-      <section class="jb-board-wrap">
-        <div id="board" class="jb-board"></div>
-      </section>
+      <!-- resto do conteúdo igual ao que você já tem -->
     </main>
     <div class="modal-overlay" id="winModal" hidden>
       <div class="modal-box">
