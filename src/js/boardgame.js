@@ -1,10 +1,12 @@
 import '@css/reset.css';
 import '@css/jogo.css';
+import favicon from '@imagens/favicon.ico';
 import marioImg from '@imagens/characters/mario.png';
 import luigiImg from '@imagens/characters/luigi.png';
 import peachImg from '@imagens/characters/peach.png';
 import toadImg from '@imagens/characters/toad.png';
 
+document.querySelector('link[rel="icon"]').href = favicon;
 document.addEventListener('DOMContentLoaded', () => {
   const startBtn = document.getElementById('startBtn');
   const boardEl = document.getElementById('board');
