@@ -9,14 +9,6 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         jogo: resolve(__dirname, 'jogo.html'),
       },
-      output: {
-        entryFileNames: (chunk) => {
-          if (chunk.name === 'jogo') { return 'jogo.html'; }
-          if (chunk.name === 'main') { return 'index.html'; }
-          return '[name].html';
-        },
-        assetFileNames: 'assets/[name]-[hash][extname]',
-      },
     },
   },
   resolve: {
