@@ -15,18 +15,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'index.html'),
-        jogo: path.resolve(__dirname, 'src/page/jogo.html'),
-      },
-      output: {
-        entryFileNames: (chunk) => {
-          if (chunk.name === 'jogo') {
-            return 'jogo/[name].js';
-          }
-          return '[name].js';
-        },
-        assetFileNames: (assetInfo) => {
-          return 'assets/[name]-[hash][extname]';
-        },
+        'page/jogo': path.resolve(__dirname, 'src/page/jogo.html'),
       },
     },
   },
