@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="Site do jogo da memória do filme Super Mario Bros" />
-    <link rel="shortcut icon" href="src/imagens/favicon.ico" type="image/x-icon" />
     <title>Jogo da Memória - Mário Brothers!!</title>
   </head>
   <body>
@@ -58,10 +57,11 @@
         <p class="modal-msg" id="winMsg"></p>
         <div class="modal-actions">
           <button class="btn-modal btn-replay" id="replayBtn">🔄 Jogar Novamente</button>
-          <button class="btn-modal btn-menu" id="menuBtn" onclick="location.href='index.html'">🏠 Início</button>
+          <button class="btn-modal btn-menu" id="menuBtn">🏠 Início</button>
         </div>
       </div>
     </div>
-    <script type="module" src="@js/boardgame.js"></script>
+    <!-- O Vite injeta automaticamente o bundle certo no build -->
+    <script type="module" src="/Mario-Brothers-Web-Essentials/assets/jogo-XYZ.js"></script>
   </body>
 </html>

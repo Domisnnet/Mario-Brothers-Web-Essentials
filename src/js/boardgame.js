@@ -6,8 +6,8 @@ import luigiImg from '@imagens/characters/luigi.png';
 import peachImg from '@imagens/characters/peach.png';
 import toadImg from '@imagens/characters/toad.png';
 
-document.querySelector('link[rel="icon"]').href = favicon;
 document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('link[rel="icon"]').href = favicon;
   const startBtn = document.getElementById('startBtn');
   const boardEl = document.getElementById('board');
   const scoreboard = document.getElementById('scoreboard');
@@ -159,9 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   function onCardClick(card) {
-    if (locked) return;
-    if (card.matched) return;
-    if (flipped.includes(card)) return;
+    if (locked || card.matched || flipped.includes(card)) return;
     flipCard(card, true);
     flipped.push(card);
     if (flipped.length === 2) {
@@ -172,8 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   function flipCard(card, faceUp) {
-    if (faceUp) card.el.classList.add('flipped');
-    else card.el.classList.remove('flipped');
+    card.el.classList.toggle('flipped', faceUp);
   }
   function checkMatch() {
     const [a, b] = flipped;
@@ -204,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 900);
     }
   }
-  function shuffleUnmatched() {
+    function shuffleUnmatched() {
     const unmatched = cards.filter((c) => !c.matched);
     if (unmatched.length === 0) return;
     unmatched.forEach((c) => {
@@ -213,7 +210,6 @@ document.addEventListener('DOMContentLoaded', () => {
       c.el.style.opacity = '0.3';
     });
     setTimeout(() => {
-      const positions = unmatched.map((c) => c.el);
       const shuffledData = shuffle(
         unmatched.map((c) => ({
           pairId: c.pairId,
@@ -228,16 +224,15 @@ document.addEventListener('DOMContentLoaded', () => {
         card.src = data.src;
         card.emoji = data.emoji;
         card.label = data.label;
+
         const front = card.el.querySelector('.card-front');
         if (data.src) {
           front.innerHTML = `<img src="${data.src}" alt="${data.label}" draggable="false">`;
         } else {
           front.innerHTML = `<span style="font-size:38px;line-height:1">${data.emoji}</span>`;
         }
-        card.el.setAttribute(
-          'aria-label',
-          'Carta ' + (card.el.dataset.idx || '')
-        );
+
+        card.el.setAttribute('aria-label', 'Carta ' + (card.el.dataset.idx || ''));
         card.el.style.transform = '';
         card.el.style.opacity = '';
         card.el.style.transition = '';
@@ -277,6 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
     stopTimer();
     scoreboard.hidden = true;
     boardEl.innerHTML = '';
+    location.href = 'index.html';
   });
   spawnStars();
 });
